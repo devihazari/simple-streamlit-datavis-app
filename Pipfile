@@ -4,6 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+plotly-express = "*"
+pandas = "*"
+streamlit = "*"
 
 [dev-packages]
 
