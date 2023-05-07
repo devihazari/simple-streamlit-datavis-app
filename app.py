@@ -12,9 +12,9 @@ if not show_manuf_1k_ads:
     df = df.groupby('manufacturer').filter(lambda x: len(x) > 1000)
 
 st.dataframe(df)
-st.header('Vehicle types by manufacturer')
-st.write(px.histogram(df, x='manufacturer', color='type'))
-st.header('Histogram of `condition` vs `model_year`')
+st.header('Vehicle types by fuel')
+st.write(px.histogram(df, x='manufacturer', color='fuel'))
+st.header('Histogram of `transmission` vs `model_year`')
 
 # -------------------------------------------------------
 # histograms in plotly:
@@ -27,7 +27,7 @@ st.header('Histogram of `condition` vs `model_year`')
 # -------------------------------------------------------
 
 # histograms in plotly_express:
-st.write(px.histogram(df, x='model_year', color='condition'))
+st.write(px.histogram(df, x='model_year', color='transmission'))
 # a lot more concise!
 # -------------------------------------------------------
 
